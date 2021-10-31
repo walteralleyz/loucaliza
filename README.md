@@ -1,5 +1,6 @@
 # LoucaLiza
-##### *Uma aplicação de aluguel de carros*
+##### *Uma aplicação de aluguel de carros* 
+**Status**: &#128679;
 
 <p>Esse repositório é parte de um projeto do curso de Software Design.
 O projeto tem um objetivo simples de reproduzir um CRUD básico, com a manipulação de registros, em memória, das entidades que definem o coração do negócio.</p>
