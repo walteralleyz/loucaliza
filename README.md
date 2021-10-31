@@ -45,18 +45,18 @@ Estrutura de Diretórios
 
 ### Participantes e funções
 
-##### *@NGomes1990*
+##### [*@NGomes1990*](https://github.com/NGomes1990)
 
  - [x] Dicionário de Dados
 
-##### *@romulo-gpmalkiewiez*
+##### [*@romulo-gpmalkiewiez*](https://github.com/romulo-gpmalkiewiez)
 - [x] Plano de Projeto
 - [x] Diagrama de Classes
 
 ##### *Fran*
 - [x] Prototipação de interfaces
 
-##### *@walteralleyz*
+##### [*@walteralleyz*](https://github.com/walteralleyz)
 - [ ] Definir estrutura do projeto
 - [ ] Codificação
 
