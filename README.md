@@ -48,11 +48,13 @@ Estrutura de Diretórios
 
 ##### [*@NGomes1990*](https://github.com/NGomes1990)
 
- - [x] Dicionário de Dados
+- [x] Dicionário de Dados
 
 ##### [*@romulo-gpmalkiewiez*](https://github.com/romulo-gpmalkiewiez)
 - [x] Plano de Projeto
 - [x] Diagrama de Classes
+- [x] Prototipação de interfaces
+- [ ] Dicionário de Dados
 
 ##### *Fran*
 - [x] Prototipação de interfaces
