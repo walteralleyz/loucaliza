@@ -17,16 +17,14 @@ namespace Loucaliza.view
 
         public void Execute()
         {
-            TextBox textBox = new TextBox();
             ButtonUtils buttonUtils = new ButtonUtils();
             Button locacaoButton = buttonUtils.CreateMenuButton("Locações", new EventHandler(LocacaoButtonClick));
             Button clienteButton = buttonUtils.CreateMenuButton("Clientes", new EventHandler(ClienteButtonClick));
             Button veiculoButton = buttonUtils.CreateMenuButton("Veículos", new EventHandler(VeiculoButtonClick));
 
             eventControl = new MainViewEventControl(this);
-            textBox.Text = "Localiza";
 
-            Controls.Add(textBox);
+            Controls.Add(new TitlePanel().BuildPanel());
             Controls.Add(locacaoButton);
             Controls.Add(clienteButton);
             Controls.Add(veiculoButton);

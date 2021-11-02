@@ -17,6 +17,7 @@ namespace Loucaliza.view
             this.eventControl = eventControl;
             this.novoForm = novoForm;
             this.FormClosing += new FormClosingEventHandler(eventControl.CloseMainView);
+            this.Controls.Add(new TitlePanel().BuildPanel());
         }
 
         public void MenuClick(object sender, EventArgs eventArgs)
