@@ -1,6 +1,6 @@
 using System;
 using Loucaliza.view;
-using Loucaliza.model.veiculo;
+using Loucaliza.utils;
 
 namespace Loucaliza
 {
@@ -9,7 +9,9 @@ namespace Loucaliza
         public static void Main(string[] args)
         {
             MainView mainView = new MainView();
-            mainView.execute();
+
+            Database.InitDB();
+            mainView.Execute();
         }
     }
 }

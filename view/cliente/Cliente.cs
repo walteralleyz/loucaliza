@@ -1,22 +1,21 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Loucaliza;
 using Loucaliza.utils;
 
 namespace Loucaliza.view.cliente
 {
-    public class ClienteView : Form
+    public class ClienteView : View
     {
-        private MainView mainView;
-
-        public ClienteView(MainView mainView)
+        public ClienteView(MainViewEventControl eventControl) : base(eventControl, new NovoClienteView())
         {
             this.Text = "Clientes";
             this.MinimumSize = new Size(800, 600);
-            this.mainView = mainView;
+            this.Execute();
         }
 
-        public void execute()
+        public void Execute()
         {
             ButtonUtils buttonUtils = new ButtonUtils();
             Button menu = buttonUtils.CreateMenuButton("Menu", new EventHandler(MenuClick));
@@ -24,22 +23,6 @@ namespace Loucaliza.view.cliente
 
             Controls.Add(menu);
             Controls.Add(novo);
-        }
-
-        public void MenuClick(object sender, EventArgs eventArgs)
-        {
-            this.Hide();
-            this.mainView.Show();
-        }
-
-        public void NovoClick(object sender, EventArgs eventArgs)
-        {
-            NovoClienteView novoClienteView = new NovoClienteView(this);
-
-            novoClienteView.execute();
-            novoClienteView.Show();
-
-            this.Hide();
         }
     }
 }

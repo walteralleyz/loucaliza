@@ -1,11 +1,16 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Loucaliza;
+using Loucaliza.utils;
+using Loucaliza.model;
 using Loucaliza.model.veiculo;
 
 namespace Loucaliza.controller
 {
     public class VeiculoController
     {
-        private Repository<VeiculoModel> repository = new Repository<VeiculoModel>();
+        private Repository<VeiculoModel> repository = Database.GetVeiculoRepo();
 
         public List<VeiculoModel> Listar()
         {

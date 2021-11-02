@@ -6,15 +6,14 @@ namespace Loucaliza.view.veiculo
 {
     public class NovoVeiculoView : Form
     {
-        private VeiculoView veiculoView;
-        public NovoVeiculoView(VeiculoView veiculoView)
+        public NovoVeiculoView()
         {
             this.Text = "Novo Veículo";
             this.MinimumSize = new Size(800, 600);
-            this.veiculoView = veiculoView;
+            this.Execute();
         }
 
-        public void execute()
+        public void Execute()
         {
             Button salvar = new Button();
             salvar.Text = "Salvar";
@@ -25,8 +24,7 @@ namespace Loucaliza.view.veiculo
 
         public void SalvarClick(object sender, EventArgs eventArgs)
         {
-            this.Hide();
-            this.veiculoView.Show();
+            this.DialogResult = DialogResult.Yes;
         }
     }
 }

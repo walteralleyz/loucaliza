@@ -1,11 +1,15 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Loucaliza;
+using Loucaliza.utils;
 using Loucaliza.model;
 
 namespace Loucaliza.controller
 {
     public class LocacaoController
     {
-        private Repository<LocacaoModel> repository = new Repository<LocacaoModel>();
+        private Repository<LocacaoModel> repository = Database.GetLocacaoRepo();
 
         public List<LocacaoModel> Listar()
         {
