@@ -1,11 +1,16 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Loucaliza;
+using Loucaliza.utils;
+using Loucaliza.model;
 using Loucaliza.model.cliente;
 
 namespace Loucaliza.controller
 {
     public class ClienteController
     {
-        private Repository<ClienteModel> repository = new Repository<ClienteModel>();
+        private Repository<ClienteModel> repository = Database.GetClienteRepo();
         
         public List<ClienteModel> Listar()
         {

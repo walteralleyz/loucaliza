@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Loucaliza;
 using Loucaliza.utils;
 
 namespace Loucaliza.view.cliente
@@ -16,7 +17,7 @@ namespace Loucaliza.view.cliente
             this.mainView = mainView;
         }
 
-        public void execute()
+        public void Execute()
         {
             ButtonUtils buttonUtils = new ButtonUtils();
             Button menu = buttonUtils.CreateMenuButton("Menu", new EventHandler(MenuClick));
@@ -36,7 +37,7 @@ namespace Loucaliza.view.cliente
         {
             NovoClienteView novoClienteView = new NovoClienteView(this);
 
-            novoClienteView.execute();
+            novoClienteView.Execute();
             novoClienteView.Show();
 
             this.Hide();

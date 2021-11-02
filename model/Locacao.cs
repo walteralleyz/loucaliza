@@ -1,4 +1,6 @@
 using System;
+using Loucaliza;
+using Loucaliza.model;
 using Loucaliza.model.cliente;
 using Loucaliza.model.veiculo;
 

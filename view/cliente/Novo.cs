@@ -1,7 +1,6 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Loucaliza.utils;
 
 namespace Loucaliza.view.cliente
 {
@@ -15,7 +14,7 @@ namespace Loucaliza.view.cliente
             this.clienteView = clienteView;
         }
 
-        public void execute()
+        public void Execute()
         {
             Button salvar = new Button();
             salvar.Text = "Salvar";

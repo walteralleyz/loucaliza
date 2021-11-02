@@ -14,7 +14,7 @@ namespace Loucaliza.view.veiculo
             this.veiculoView = veiculoView;
         }
 
-        public void execute()
+        public void Execute()
         {
             Button salvar = new Button();
             salvar.Text = "Salvar";

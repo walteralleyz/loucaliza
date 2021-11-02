@@ -1,3 +1,5 @@
+using System;
+
 namespace Loucaliza.model.cliente
 {
     public class Endereco

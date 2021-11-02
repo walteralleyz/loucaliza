@@ -1,4 +1,8 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using Loucaliza;
+using Loucaliza.model;
 
 namespace Loucaliza.model.cliente
 {
@@ -11,6 +15,7 @@ namespace Loucaliza.model.cliente
         public DateTime dataNascimento { get; set; }
         public Telefone telefone { get; set; }
         public Endereco endereco { get; set; }
+        public List<LocacaoModel> locacoes { get; set;}
     }
 }
 

@@ -15,7 +15,7 @@ namespace Loucaliza.view.locacao
             this.locacaoView = locacaoView;
         }
 
-        public void execute()
+        public void Execute()
         {
             Button salvar = new Button();
             salvar.Text = "Salvar";

@@ -1,6 +1,8 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Loucaliza;
+using Loucaliza.view;
 using Loucaliza.view.locacao;
 using Loucaliza.view.veiculo;
 using Loucaliza.view.cliente;
@@ -11,19 +13,23 @@ namespace Loucaliza.view
     public class MainView : Form
     {
 
-        public void execute()
+        public void Execute()
         {
+            TextBox textBox = new TextBox();
             ButtonUtils buttonUtils = new ButtonUtils();
             Button locacaoButton = buttonUtils.CreateMenuButton("Locações", new EventHandler(LocacaoButtonClick));
             Button clienteButton = buttonUtils.CreateMenuButton("Clientes", new EventHandler(ClienteButtonClick));
             Button veiculoButton = buttonUtils.CreateMenuButton("Veículos", new EventHandler(VeiculoButtonClick));
 
+            textBox.Text = "Localiza";
+
+            Controls.Add(textBox);
             Controls.Add(locacaoButton);
             Controls.Add(clienteButton);
             Controls.Add(veiculoButton);
 
             this.MinimumSize = new Size(800, 600);
-            this.Text = "LoucaLiza";
+            this.Text = "LoucaLiza - Locadora de Veículos";
             Application.Run(this);
         }
 
@@ -31,7 +37,7 @@ namespace Loucaliza.view
         {
             LocacaoView locacaoView = new LocacaoView(this);
 
-            locacaoView.execute();
+            locacaoView.Execute();
             locacaoView.Show();
 
             this.Hide();
@@ -41,7 +47,7 @@ namespace Loucaliza.view
         {
             VeiculoView veiculoView = new VeiculoView(this);
 
-            veiculoView.execute();
+            veiculoView.Execute();
             veiculoView.Show();
 
             this.Hide();
@@ -51,7 +57,7 @@ namespace Loucaliza.view
         {
             ClienteView clienteView = new ClienteView(this);
             
-            clienteView.execute();
+            clienteView.Execute();
             clienteView.Show();
 
             this.Hide();

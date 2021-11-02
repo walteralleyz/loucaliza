@@ -1,3 +1,5 @@
+using System;
+
 namespace Loucaliza.model.enums
 {
     public enum Cor
