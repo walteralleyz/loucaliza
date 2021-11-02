@@ -6,15 +6,13 @@ using Loucaliza.utils;
 
 namespace Loucaliza.view.veiculo
 {
-    public class VeiculoView : Form
+    public class VeiculoView : View
     {
-        private MainView mainView;
-
-        public VeiculoView(MainView mainView)
+        public VeiculoView(MainViewEventControl eventControl) : base(eventControl, new NovoVeiculoView())
         {
             this.Text = "Veículos";
             this.MinimumSize = new Size(800, 600);
-            this.mainView = mainView;
+            this.Execute();
         }
 
         public void Execute()
@@ -25,22 +23,6 @@ namespace Loucaliza.view.veiculo
 
             Controls.Add(menu);
             Controls.Add(novo);
-        }
-
-        public void MenuClick(object sender, EventArgs eventArgs)
-        {
-            this.Hide();
-            this.mainView.Show();
-        }
-
-        public void NovoClick(object sender, EventArgs eventArgs)
-        {
-            NovoVeiculoView novoVeiculoView = new NovoVeiculoView(this);
-
-            novoVeiculoView.Execute();
-            novoVeiculoView.Show();
-
-            this.Hide();
         }
     }
 }

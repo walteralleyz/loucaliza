@@ -8,8 +8,9 @@ namespace Loucaliza
     {
         public static void Main(string[] args)
         {
-            Database.InitDB();
             MainView mainView = new MainView();
+
+            Database.InitDB();
             mainView.Execute();
         }
     }

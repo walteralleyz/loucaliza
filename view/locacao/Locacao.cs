@@ -3,18 +3,17 @@ using System.Drawing;
 using System.Windows.Forms;
 using Loucaliza;
 using Loucaliza.utils;
+using Loucaliza.view;
 
 namespace Loucaliza.view.locacao
 {
-    public class LocacaoView : Form
+    public class LocacaoView : View
     {
-        private MainView mainView;
-
-        public LocacaoView(MainView mainView)
+        public LocacaoView(MainViewEventControl eventControl) : base(eventControl, new NovaLocacaoView())
         {
             this.MinimumSize = new Size(800, 600);
             this.Text = "Loucaliza - Locações";
-            this.mainView = mainView;
+            this.Execute();
         }
 
         public void Execute()
@@ -25,22 +24,6 @@ namespace Loucaliza.view.locacao
 
             Controls.Add(menu);
             Controls.Add(novo);
-        }
-
-        public void MenuClick(object sender, EventArgs eventArgs)
-        {
-            this.Hide();
-            this.mainView.Show();
-        }
-
-        public void NovoClick(object sender, EventArgs eventArgs)
-        {
-            NovaLocacaoView novaLocacaoView = new NovaLocacaoView(this);
-
-            novaLocacaoView.Execute();
-            novaLocacaoView.Show();
-
-            this.Hide();
         }
     }
 }

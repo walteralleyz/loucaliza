@@ -13,6 +13,8 @@ namespace Loucaliza.view
     public class MainView : Form
     {
 
+        private MainViewEventControl eventControl;
+
         public void Execute()
         {
             TextBox textBox = new TextBox();
@@ -21,6 +23,7 @@ namespace Loucaliza.view
             Button clienteButton = buttonUtils.CreateMenuButton("Clientes", new EventHandler(ClienteButtonClick));
             Button veiculoButton = buttonUtils.CreateMenuButton("Veículos", new EventHandler(VeiculoButtonClick));
 
+            eventControl = new MainViewEventControl(this);
             textBox.Text = "Localiza";
 
             Controls.Add(textBox);
@@ -35,30 +38,22 @@ namespace Loucaliza.view
 
         public void LocacaoButtonClick(object sender, EventArgs eventArgs)
         {
-            LocacaoView locacaoView = new LocacaoView(this);
-
-            locacaoView.Execute();
-            locacaoView.Show();
-
-            this.Hide();
+            OpenViewRoutine(new LocacaoView(this.eventControl));
         }
 
         public void VeiculoButtonClick(object sender, EventArgs eventArgs)
         {
-            VeiculoView veiculoView = new VeiculoView(this);
-
-            veiculoView.Execute();
-            veiculoView.Show();
-
-            this.Hide();
+            OpenViewRoutine(new VeiculoView(this.eventControl));
         }
 
         public void ClienteButtonClick(object sender, EventArgs eventArgs)
         {
-            ClienteView clienteView = new ClienteView(this);
-            
-            clienteView.Execute();
-            clienteView.Show();
+            OpenViewRoutine(new ClienteView(this.eventControl));
+        }
+
+        public void OpenViewRoutine(View view)
+        {
+            view.Show();
 
             this.Hide();
         }

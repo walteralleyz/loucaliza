@@ -6,13 +6,11 @@ namespace Loucaliza.view.locacao
 {
     public class NovaLocacaoView : Form
     {
-        private LocacaoView locacaoView;
-
-        public NovaLocacaoView(LocacaoView locacaoView)
+        public NovaLocacaoView()
         {
             this.Text = "Nova Locação";
             this.MinimumSize = new Size(800, 600);
-            this.locacaoView = locacaoView;
+            this.Execute();
         }
 
         public void Execute()
@@ -26,8 +24,7 @@ namespace Loucaliza.view.locacao
 
         public void SalvarClick(object sender, EventArgs eventArgs)
         {
-            this.Hide();
-            this.locacaoView.Show();
+            this.DialogResult = DialogResult.Yes;
         }
     }
 }
