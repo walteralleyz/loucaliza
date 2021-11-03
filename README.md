@@ -54,7 +54,7 @@ Estrutura de Diretórios
 - [x] Plano de Projeto
 - [x] Diagrama de Classes
 
-##### *Fran*
+##### [*Fran*](https://github.com/missmissing84)
 - [x] Prototipação de interfaces
 
 ##### [*@walteralleyz*](https://github.com/walteralleyz)
