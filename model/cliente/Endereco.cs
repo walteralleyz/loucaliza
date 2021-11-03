@@ -1,17 +1,12 @@
-using System;
-
-namespace Loucaliza.model.cliente
+﻿namespace LoucaLiza.model.cliente
 {
     public class Endereco
     {
-        public int id { get; set; }
-        public string cep { get; set; }
-        public string logradouro { get; set; }
-        public string numero { get; set; }
-        public string bairro { get; set; }
-        public string cidade { get; set; }
-        public string estado { get; set; }
+        public string Cep { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
     }
 }
-
-

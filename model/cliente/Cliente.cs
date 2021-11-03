@@ -1,22 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Loucaliza;
-using Loucaliza.model;
+﻿using System;
 
-namespace Loucaliza.model.cliente
+namespace LoucaLiza.model.cliente
 {
-    public class ClienteModel
+    public class Cliente
     {
-        public int id { get; set; }
-        public string nome { get; set; }
-        public string cpf { get; set; }
-        public string email { get; set; }
-        public DateTime dataNascimento { get; set; }
-        public Telefone telefone { get; set; }
-        public Endereco endereco { get; set; }
-        public List<LocacaoModel> locacoes { get; set;}
+        public int? Id { get; set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public Telefone Telefone { get; set; }
+        public Endereco Endereco { get; set; }
     }
 }
-
-

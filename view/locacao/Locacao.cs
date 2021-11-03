@@ -1,9 +1,8 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Loucaliza;
 using Loucaliza.utils;
-using Loucaliza.view;
+
 
 namespace Loucaliza.view.locacao
 {

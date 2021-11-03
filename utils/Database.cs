@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
-using Loucaliza;
-using Loucaliza.model;
-using Loucaliza.model.cliente;
 using Loucaliza.model.veiculo;
+using LoucaLiza.model.cliente;
+using LoucaLiza.model.locacao;
 
 namespace Loucaliza.utils
 {
@@ -13,24 +11,24 @@ namespace Loucaliza.utils
 
         public static void InitDB()
         {
-            database.Add("locacoes", new Repository<LocacaoModel>());
-            database.Add("veiculos", new Repository<VeiculoModel>());
-            database.Add("clientes", new Repository<ClienteModel>());
+            database.Add("locacoes", new Repository<Locacao>());
+            database.Add("veiculos", new Repository<Veiculo>());
+            database.Add("clientes", new Repository<Cliente>());
         }
 
-        public static Repository<LocacaoModel> GetLocacaoRepo()
+        public static Repository<Locacao> GetLocacaoRepo()
         {
-            return database["locacoes"] as Repository<LocacaoModel>;
+            return database["locacoes"] as Repository<Locacao>;
         }
 
-        public static Repository<VeiculoModel> GetVeiculoRepo()
+        public static Repository<Veiculo> GetVeiculoRepo()
         {
-            return database["veiculos"] as Repository<VeiculoModel>;
+            return database["veiculos"] as Repository<Veiculo>;
         }
 
-        public static Repository<ClienteModel> GetClienteRepo()
+        public static Repository<Cliente> GetClienteRepo()
         {
-            return database["clientes"] as Repository<ClienteModel>;
+            return database["clientes"] as Repository<Cliente>;
         }
     }
 }

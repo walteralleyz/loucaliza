@@ -1,4 +1,3 @@
-using System;
 using Loucaliza.view;
 using Loucaliza.utils;
 
@@ -15,4 +14,3 @@ namespace Loucaliza
         }
     }
 }
-

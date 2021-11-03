@@ -1,6 +1,4 @@
-using System;
-
-namespace Loucaliza.model.enums
+﻿namespace Loucaliza.model.veiculo
 {
     public enum Cor
     {
@@ -22,4 +20,3 @@ namespace Loucaliza.model.enums
         FANTASIA
     }
 }
-

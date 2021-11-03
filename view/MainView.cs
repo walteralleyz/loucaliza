@@ -1,8 +1,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Loucaliza;
-using Loucaliza.view;
+
 using Loucaliza.view.locacao;
 using Loucaliza.view.veiculo;
 using Loucaliza.view.cliente;
